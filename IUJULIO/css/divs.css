@@ -1,0 +1,58 @@
+#marco {
+	border: 1px solid black;
+}
+
+/******************** PAGINACION *********/
+.paginacion {
+  position: absolute;
+  bottom: 11%;
+  left: 45%;
+  z-index: 1000;
+}
+
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #4527A0;
+  border-color: #4527A0;
+}
+
+.page-item.navegacion .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #7E57C2;
+  border-color: #7E57C2;
+}
+
+.page-item.navegacion .page-link:hover {
+  z-index: 1;
+  color: #fff;
+  background-color: #B39DDB;
+  border-color: #ffffff;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #4527A0;
+  background-color: #D1C4E9;
+  border: 1px solid #4527A0;
+}
+
+.page-link:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #B39DDB;
+  border-color: #ffffff;
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #fff;
+    border-color: #dee2e6;
+}

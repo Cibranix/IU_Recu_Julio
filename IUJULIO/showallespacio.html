@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head lang='es'>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link  rel="icon" href="favicon.ico" type="image/ico" />
+
+        <script type="text/javascript" src="js/showallespacio.js"></script>
+        
+        <script type="text/javascript" src="js/funcionesComunes.js"></script>
+        <script type="text/javascript" src="js/config.js"></script>
+        <script type="text/javascript" src="js/paginacion.js"></script>
+        <script type="text/javascript" src="js/funcionesFormularios.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script type="text/javascript" src="Locale/idioma.js"></script>
+        <script type="text/javascript" src="Locale/Lang_EN.js"></script>
+        <script type="text/javascript" src="Locale/Lang_ES.js"></script>
+        <script type="text/javascript" src="Locale/Lang_GA.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/modal.css" />
+        <link rel="stylesheet" type="text/css" href="css/divs.css" />
+</head>      
+
+<body onload="includeCabecera();getLisEspacios();setLang('');">
+        <div id="menuIdioma"></div>
+        <div id="UserDesconectar"></div>
+        <p onclick="buscarEspacio();">buscar</p>
+        
+        <div id="divtablaShow">
+                <table id="tablaShow" border= '1'>
+                        <thead>
+                                <!--<th class="ID_ESPACIO"></th>-->
+                                <th class="NOMBRE_ESPACIO"></th>
+                                <th class="DESCRIPCION_ESPACIO"></th>
+                                <th class="ID_TIPO_ESPACIO"></th>
+                                <th class="ID_CATEGORIA_ESPACIO"></th>
+                                <th class="ACCIONES"></th>
+                        </thead>
+                        <tbody id="datosShow">
+
+                        </tbody>
+
+                </table>
+        </div>
+
+
+        <div class="filasTabla">
+                        <div id="paginacion">
+                                1 a 5 de 101
+                        </div>
+        </div>
+
+        
+
+        <div id="itemPaginacion" class="paginacion">
+                <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+
+                                <nav aria-label= "Page navigation example">
+                                        <ul class="pagination">
+                                                <li id="anterior" class="page-item disabled tooltip">
+                                                        <a onclick = "" class="page-link" href="#" aria-label="Previous">
+                                                                <span aria-hidden="true">&laquo;</span>
+                                                                <span class="sr-only">Previous</span>
+                                                                <span class="tooltiptext"> Anterior</span>
+                                                        </a>
+                                                </li>
+
+                                                <li id="primerhuecopagina" class="page-item navegacion tooltip">
+                                                        <a class="page-link" href="#" onclick="">1</a>
+                                                </li>
+
+                                                <li id="segundohuecopagina" class="page-item tooltip">
+                                                        <a class="page-link" href="#" onclick="">2</a>
+                                                </li>
+
+                                                <li id="tercerhuecopagina" class="page-item tooltip">
+                                                        <a class="page-link" href="#" onclick="">3</a>
+                                                </li>
+
+                                                <li id="siguiente" class="page-item navegacion tooltip">
+                                                        <a onclick = "" class="page-link" href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                        <span class="sr-only">Next</span>
+                                                        <span class="tooltiptext">Siguiente</span>
+                                                    </a>
+                                                </li>
+                                        </ul>
+                                </nav>
+                        </ul>
+                </nav>
+        </div>
+
+
+        
+             
+        <div id="modal" style="display:none">
+                <div id="contenido-interno">
+                        <div id="aviso"><img src="" name="aviso" id="imagenAviso"/></div>
+                        <div id="mensajeError"></div>
+                        <a id="cerrar" href="#" onclick="cerrar('modal', '', '');" class="tooltip">
+                                <img class="iconCerrar" alt="Cerrar" src="images/icons/close.png"/>
+                                <span class="tooltiptext iconCerrar"></span>
+                        </a>
+                </div>
+        </div>
+
+
+        
+        <div id='divformgenerico' style="display:none">
+                <div id="tituloForms" class="tituloForms"></div>
+                <a onclick = "cerrar('divformgenerico','','');"><img src = './images/icons/close.png' width="50px"></a>
+                <form name='formgenerico' id='formgenerico' method="post" action="" onsubmit="" enctype="multipart/form-data">
+                        <label class='ID_ESPACIO'></label>
+                        <input type='text' name='ID_ESPACIO' id='ID_ESPACIO' onblur=''><br>
+                        <label class='NOMBRE_ESPACIO'></label>
+                        <input type='text' name='NOMBRE_ESPACIO' id='NOMBRE_ESPACIO' onblur=''><br>
+                        <label class='DESCRIPCION_ESPACIO'></label>
+                        <input type='text' name='DESCRIPCION_ESPACIO' id='DESCRIPCION_PERSONA' onblur=''><br>
+                        <label class='ID_TIPO_ESPACIO'></label>
+                        <input type='text' name='ID_TIPO_ESPACIO' id='ID_TIPO_ESPACIO' ><br>
+                        <label class='ID_CATEGORIA_ESPACIO'></label>
+                        <input type='text' name='ID_CATEGORIA_ESPACIO' id='ID_CATEGORIA_ESPACIO' ><br>
+
+                        <br>
+                        <button type='submit'><img  id="iconoAcciones" src="" width="50px"/></button><br>
+                </form>
+        </div>        
+
+
+</body>
+</html>
