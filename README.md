@@ -1,7 +1,5 @@
-# IU_Recu_Julio
+# Pagination_UI
 
-Recuperación julio 2022 Interfaces de Usuario (IU)
+Making a pagination of a table from a template where the file paginacion.js has to be created.
 
-Realización de una paginación de una tabla a partir de una plantilla donde hay que crear el archivo paginacion.js
-
-NOTA: 10, el código hace lo que se pide pero puede que no sea la solución más eficiente.
+Pagination made in the subject User Interfaces [Interfaces de usuario (IU)]
